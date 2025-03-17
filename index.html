@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Management System</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="top-bar">
+        <div class="store-name">IT Pharmacy</div>
+        <div class="contact-info">
+            Gangapur Road, Nashik | +912337xxxxxxx | itmedico@gmail.com
+        </div>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <!-- Add Medicine Management Tab -->
+            <div class="tab" id="medicineManagementTab">Medicine Management</div>
+
+            <!-- Existing Tabs -->
+            <div class="tab" id="addMedicineTab">Add Medicine</div>
+           
+        </div>
+        <div class="main">
+            <iframe id="functionalityFrame" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+        // Get references to tabs and functionality frame
+        const addMedicineTab = document.getElementById('addMedicineTab');
+        const medicineManagementTab = document.getElementById('medicineManagementTab'); // Reference to Medicine Management tab
+        const functionalityFrame = document.getElementById('functionalityFrame');
+
+        // Function to set src attribute of iframe based on tab clicked
+        function setFunctionalitySrc(src) {
+            functionalityFrame.src = src;
+        }
+
+      
+
+        // Add event listener for Medicine Management tab
+        medicineManagementTab.addEventListener('click', function() {
+            setFunctionalitySrc('medicine_management.html');
+        });
+    </script>
+</body>
+</html>
